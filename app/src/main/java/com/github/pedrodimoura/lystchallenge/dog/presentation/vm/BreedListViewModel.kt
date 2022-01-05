@@ -29,8 +29,8 @@ class BreedListViewModel @Inject constructor(
             dogRepository.fetchBreeds()
                 .flowOn(coroutineDispatcher)
                 .onStart { _breedsUIState.value = BreedsUIState.FetchingBreeds }
-                .catch { _breedsUIState.value = BreedsUIState.Failure(it.message.orEmpty()) }
                 .flatMapConcat { dogRepository.getBreeds() }
+                .catch { _breedsUIState.value = BreedsUIState.Failure(it.message.orEmpty()) }
                 .collect {
                     _breedsUIState.value = BreedsUIState.BreedsFetched(it)
                     _breedsUIState.value = BreedsUIState.Ready
