@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:focusable="true"
+    android:foreground="?selectableItemBackground"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:ignore="UnusedAttribute">
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Pinscher" />
+
+    <TextView
+        android:id="@+id/tvTemperament"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Quiet" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>
